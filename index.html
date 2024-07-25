@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student ID Card Generator</title>
+    <link rel="stylesheet" href="./styles/style.css">
+  </head>
+  <body>
+    <section class="container">
+        <div class="box">
+            <h1>Students Details</h1>
+        </div>
+        <form>
+            <div class="fields">
+                <label for="schoolName">School Name:</label>
+                <input type="text" id="schoolName">
+            </div>
+            <div class="fields">
+                <label for="studentName">Student Name:</label>
+                <input type="text" id="studentName">
+            </div>
+            <div class="fields">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" >
+            </div>
+            <div class="fields">
+                <label for="class">Class:</label>
+                <input type="text" id="class">
+            </div>
+            <div class="fields">
+                <label for="roll">Roll Number:</label>
+                <input type="number" id="roll">
+            </div>
+            <div class="fields">
+                <label for="contact">Contact Number:</label>
+                <input type="number" id="contact">
+            </div>
+            <div class="fields">
+                <label for="img">Upload Image:</label>
+                <input type="file" id="newImg">
+            </div>
+            <div class="fields">
+                <button class="btn" type="button" onclick="studentData()">Submit</button>
+                <button class="btn" type="reset">Clear All</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="container">
+        <div class="box">
+            <h1 id="schoolCard">School Name</h1>
+        </div>
+        <div id="studentImg">
+            <img src="./assets/Images/studentImg.png" alt="student profile pic" id="oldImg">
+        </div>
+        <div class="fields">
+            <label>Student Name:</label>
+            <label id="studentNameCard">My Name</label>
+        </div>
+        <div class="fields">
+            <label>Date of Birth:</label>
+            <label id="dobCard">dd/mm/yyy</label>
+        </div>
+        <div class="fields">
+            <label>class:</label>
+            <label id="classCard">xyz</label>
+        </div>
+        <div class="fields">
+            <label>Roll Number:</label>
+            <label id="rollNoCard">0</label>
+        </div>
+        <div class="fields">
+            <label>Contact:</label>
+            <label id="contactCard">1234567890</label>
+        </div>
+        <div id="print">
+            <button onclick="generateCard()">Print ID Card</button>
+        </div>
+    </section>
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

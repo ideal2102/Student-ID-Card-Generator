@@ -1,0 +1,117 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(224, 219, 219);
+    flex-wrap: wrap;
+    align-items: center;
+}
+.container{
+    background-color: grey;
+    margin: 10px 0;
+    /* box-shadow: x y blur size color; */
+    box-shadow: inset 0 10px 500px black ,0 0px 5px black;
+    box-sizing: border-box;
+}
+.box{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+.box h1{
+    margin: 0%;
+}
+form{
+    padding: 0 50px;
+}
+.fields{
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.fields label{
+    color: white;
+    font-size: larger;
+    font-weight: 500;
+}
+.fields input{
+    padding: 5px 0;
+    border-radius: 5px;
+    border: none;
+}
+.fields:last-child{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.btn{
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+
+.container:nth-of-type(2){
+    width: 310px;
+}
+.container:nth-of-type(2) .fields{
+    margin: 40px 40px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    gap: 20px;
+}
+#studentImg{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    margin: 0 auto;
+    margin-top: 20px;
+    color: white;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px white;
+}
+#studentImg img{
+ max-width: 100%;
+ max-height: 100%;
+}
+#print{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#print button{
+    padding: 10px 15px;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    border: none;
+}
+
+@media (max-width:425px){
+    .fields{
+        margin: 20px 0;
+    }
+    form{
+        padding: 0 10px;
+    }
+    .fields label{
+        font-size: large;
+        font-weight: 500;
+    }
+}
+
+@media print{
+    .container:nth-of-type(1){
+        display: none;
+    }
+    #print button{
+        display: none;
+    }
+}
